@@ -6,7 +6,7 @@ export function Examen () {
         <h1>Examen</h1>
         <h2>Una funcion para retornar algo y hacerlo mas dinamico</h2>
         <h3>Curso de React</h3>
-        <h4>Desarrollador de Software</h4>
+        <h4>Desarrollador de Software y movil</h4>
         </>
     )
 }
