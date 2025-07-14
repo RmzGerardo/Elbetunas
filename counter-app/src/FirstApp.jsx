@@ -1,26 +1,47 @@
+// export function Examen () {
+//     return (
+//         <>
+//         <h2>Esta es mi primera vez entrando a una aplicacion real de REACT.</h2>
+//         {/* <iframe 
+//             src="https://giphy.com/embed/d9QiBcfzg64Io" 
+//             width="480" 
+//             height="480" 
+//             frameBorder="0" 
+//             className="giphy-embed" 
+//             allowFullScreen
+//             title="Pacman GIF"
+//         ></iframe>
+//         <p><a href="https://giphy.com/gifs/pacman-gba-d9QiBcfzg64Io">via GIPHY</a></p> */}
+//         </>
+//     )
+// }
+
+// props = propiedades
+
+import PropTypes from 'prop-types';
 
 
-export function Examen () {
+export const FirstApp = ({ title, subtitle }) => {
+
     return (
         <>
-        <h1>Examen</h1>
-        <h2>Una funcion para retornar algo y hacerlo mas dinamico</h2>
-        <h3>Curso de React</h3>
-        <h4>Desarrollador de Software y movil</h4>
+        <h1>{ title }</h1>
+           {/* { Examen()} */}
+            {/* <code> { JSON.stringify(newMessage) } </code> */}
+            {/* <h4>Gerardo Rmz - Pasante de Desarrollador de Software</h4> */}
+            <p>{subtitle}</p>
         </>
     )
 }
 
+FirstApp.propTypes = {
+    title: PropTypes.string,
+    subtitle: PropTypes.number
+}
 
-export const FirstApp = () => {
+FirstApp.defaultProps = {
 
+    title: 'No hay titulo',
+    subtitle: 0
 
-    return (
-        <>
-
-           { Examen()}
-            {/* <code> { JSON.stringify(newMessage) } </code> */}
-            <p>Pasante</p>
-        </>
-    )
 }
