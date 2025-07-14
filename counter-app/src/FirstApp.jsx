@@ -21,7 +21,7 @@
 import PropTypes from 'prop-types';
 
 
-export const FirstApp = ({ title, subtitle }) => {
+export const FirstApp = ({ title = 'No hay titulo', subtitle = 5 }) => {
 
     return (
         <>
@@ -39,9 +39,3 @@ FirstApp.propTypes = {
     subtitle: PropTypes.number
 }
 
-FirstApp.defaultProps = {
-
-    title: 'No hay titulo',
-    subtitle: 0
-
-}
