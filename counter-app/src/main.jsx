@@ -7,6 +7,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
       
-        <FirstApp title = 'titulo si existente' subtitle/>
+        <FirstApp title = 'titulo si existente'/>
+        
     </React.StrictMode>
 )
