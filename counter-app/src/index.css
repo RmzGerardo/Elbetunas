@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; /* Aplica a todos los elementos */
+}
 html,
 body {
   background-color: rgb(243, 237, 230);
@@ -6,4 +9,65 @@ body {
   font-size: 1.3rem;
   padding: 10px;
   margin: 10px;
+
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0;
+}
+
+h1,
+h2 {
+  color: gray;
+  text-align: center;
+  font-size: 40px;
+}
+
+.div-r {
+  background-color: red;
+  /* text-align: center; */
+  height: 300px;
+  width: 100%;
+  /* margin: 5px; */
+  /* padding: 50px; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.div-re {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.div-r p,
+.div-r h5,
+.div-r span,
+.div-r button {
+  margin: 0;
+  padding: px 10px;
+}
+
+.soy {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+button {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: red;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 5px;
+  cursor: pointer;
 }

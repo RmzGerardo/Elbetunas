@@ -25,11 +25,11 @@ export const FirstApp = ({ title = 'No hay titulo', subtitle = 5 }) => {
 
     return (
         <>
-        <h1>{ title }</h1>
+        {/* <h1>{ title }</h1> */}
            {/* { Examen()} */}
             {/* <code> { JSON.stringify(newMessage) } </code> */}
-            {/* <h4>Gerardo Rmz - Pasante de Desarrollador de Software</h4> */}
-            <p>{subtitle}</p>
+            <h4 className='soy'>Gerardo Rmz - Pasante de Desarrollador de Software</h4>
+            {/* <p>{subtitle}</p> */}
         </>
     )
 }
