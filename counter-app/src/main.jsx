@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import {FirstApp} from "./FirstApp.jsx";
 import { PrimerComponente  } from "./CounterApp.jsx";
 import { Boton } from "./button.jsx";
+import { ColorPicker } from "./colorPicker.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <FirstApp/>
         <PrimerComponente/>
         <Boton/>
+        <ColorPicker/>
         
     </React.StrictMode>
 )  

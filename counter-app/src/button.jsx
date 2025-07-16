@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 export const Boton = () => {
 
-
     // aqui afuera va todo el codigo de js, funciones, variables, etc.
     const [numero, setNumero] = useState(1);
     const [palabra, setTexto] = useState('Texto incial');
@@ -22,7 +21,7 @@ export const Boton = () => {
 
 
     const texto = () => {
-        setTexto('Texto cambiado con useState');
+        setTexto('Texto cambiado con useState desde jsx');
 
     }
 
@@ -33,7 +32,7 @@ export const Boton = () => {
     return (
         <>
         <div className="div-re">
-        <button onClick={plus} id="boton">Hacer clic</button>
+        <button onClick={plus} id="boton">Hacer clic {numero}</button>
         <span >{numero} Pulsasiones</span>
         <button onClick={reset} id="boton">borrar pulsasiones</button>
         <button onClick={menos} id="boton">menos pulsasiones</button>
@@ -41,6 +40,5 @@ export const Boton = () => {
         <button onClick={texto} id="boton">Cambiar texto</button>
         </div>
         </>
-
     )
 }
