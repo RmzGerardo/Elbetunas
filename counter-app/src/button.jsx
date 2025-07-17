@@ -4,7 +4,7 @@ import { useState } from 'react';
 export const Boton = () => {
 
     // aqui afuera va todo el codigo de js, funciones, variables, etc.
-    const [numero, setNumero] = useState(1);
+    const [numero, setNumero] = useState(0);
     const [palabra, setTexto] = useState('Texto incial');
 
     const plus = () => {
@@ -28,7 +28,7 @@ export const Boton = () => {
     const alerta = () => {
         alert('¡Botón presionado!');
     }
-    
+
     return (
         <>
         <div className="div-re">
