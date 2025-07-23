@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/gifGrid';
+import { GifGrid } from './components/GifGrid';
 
 export const GifApp = () => {
 
-  const [categorias, setcategorias] = useState(['Dragon Ball', 'Naruto','Super Campeones', 'One Piece']);
+  const [categorias, setcategorias] = useState(['Dragon Ball']);
  
 
   const agregarCategoria = (newCategory) => {
@@ -21,7 +21,7 @@ export const GifApp = () => {
 
   return (
     <>
-      <h1>Gif App</h1>
+      <h1>Gif App</h1> 
       <AddCategory 
       onNewCategory = {event => agregarCategoria(event)}
       />
