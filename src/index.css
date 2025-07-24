@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(3, 18, 46);
+}
+
+body.dark-mode {
+  background-color: #040404;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #fff !important;
+}
+body.dark-mode h1 {
+  color: #fff !important;
+}
+.titulo-animado {
+  color: #6864f2; /* Cambia este color por el que quieras */
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.img-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 60%;
+  object-fit: cover;
+}
+
+.code-title {
+  font-family: "Fira Mono", "Consolas", monospace;
+  font-size: 2.5rem;
+  color: #fff;
+  background: #232136;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 16px #0002;
+}
+
+.code-brace {
+  color: #82aaff;
+  font-weight: bold;
+}
+
+.code-key {
+  color: red;
+  font-weight: bold;
+}
