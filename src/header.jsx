@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsCloudMoonFill, BsSunFill } from "react-icons/bs";
+import { FaTwitter, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import spider from "./img/spider.jpg"; // Asegúrate de que la ruta sea correcta
 
@@ -17,44 +18,86 @@ export const Header = () => {
 
   return (
     <>
-      <div className="position-relative mt-4">
-        <ul className="nav justify-content-center nav-underline">
-          <li className="nav-item">
-            <a className="nav-link" aria-current="page" href="#">
-              Proyectos
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Historia
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Experiencia
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" aria-disabled="true">
-              Contactos
-            </a>
-          </li>
-        </ul>
-        <button
-          className={`btn btn-sm position-absolute top-0 end-0 me-3 ${
-            color ? "btn-warning" : "btn-dark"
-          }`}
-          onClick={colorChange}
-        >
-          {color ? "Modo claro" : "Modo oscuro"}{" "}
-          {color ? <BsSunFill /> : <BsCloudMoonFill />}
-        </button>
-      </div>
+      <nav className="navbar py-3" style={{ background: "#0a1a26" }}>
+        <div className="container-fluid d-flex align-items-center justify-content-between">
+          {/* Izquierda: Avatar y nombre */}
+          <div className="d-flex align-items-center">
+            <img
+              src={spider}
+              alt="Avatar"
+              style={{
+                width: "56px",
+                height: "56px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                border: "2px solid #fff",
+                marginRight: "16px",
+              }}
+            />
+            <span
+              style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "500" }}
+            >
+              ElBetunas
+            </span>
+          </div>
 
-      <div
-        className="row align-items-center justify-content-center mt-4"
-        style={{ minHeight: "300px" }}
-      >
+          {/* Centro: Menú */}
+          <ul className="nav justify-content-center gap-4">
+            <li className="nav-item">
+              <a
+                className="nav-link text-light"
+                href="https://www.linkedin.com/in/elbetunas/"
+              >
+                Inicio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light" href="#">
+                Portafolio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light" href="#">
+                Experiencia
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light" href="#">
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          {/* Derecha: Iconos y botón modo oscuro */}
+          <div className="d-flex align-items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/elbetunas/"
+              target="_blank"
+              className="text-light"
+            >
+              <FaLinkedin size={22} />
+            </a>
+            <a
+              href="https://github.com/RmzGerardo"
+              target="_blank"
+              className="text-light"
+            >
+              <FaGithub size={22} />
+            </a>
+            <button
+              className={`btn btn-sm ${
+                color ? "btn-warning" : "btn-dark"
+              } ms-2`}
+              onClick={colorChange}
+              style={{ borderRadius: "50%" }}
+            >
+              {color ? <BsSunFill /> : <BsCloudMoonFill />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="row align-items-center justify-content-center m-5">
         <div className="col-auto d-flex flex-column justify-content-center align-items-center">
           <h1 className="text-center titulo-animado">
             <Typewriter
@@ -68,10 +111,10 @@ export const Header = () => {
             />
           </h1>
         </div>
-        <div className="col-auto d-flex justify-content-center align-items-center">
+        {/* <div className="col-auto d-flex justify-content-center align-items-center">
           <img src={spider} className="img-circle" alt="Spider" />
-        </div>
-      </div> 
+        </div> */}
+      </div>
     </>
   );
 };
