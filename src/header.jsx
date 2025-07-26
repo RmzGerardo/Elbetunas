@@ -42,10 +42,10 @@ export const Header = () => {
           </div>
 
           {/* Centro: Menú */}
-          <ul className="nav justify-content-center gap-4">
+          <ul className="nav justify-content-center gap-4 nav-text">
             <li className="nav-item">
               <a
-                className="nav-link text-light"
+                className="nav-link"
                 href="https://www.linkedin.com/in/elbetunas/"
               >
                 Inicio
@@ -97,7 +97,7 @@ export const Header = () => {
         </div>
       </nav>
 
-      <div className="row align-items-center justify-content-center m-5">
+      <div className="row align-items-center justify-content-center m-4">
         <div className="col-auto d-flex flex-column justify-content-center align-items-center">
           <h1 className="text-center titulo-animado">
             <Typewriter
