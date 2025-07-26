@@ -21,8 +21,9 @@ export const Header = () => {
       <nav className="navbar py-3" style={{ background: "#0a1a26" }}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           {/* Izquierda: Avatar y nombre */}
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center avatar">
             <img
+              className="avatar-img"
               src={spider}
               alt="Avatar"
               style={{
@@ -34,15 +35,13 @@ export const Header = () => {
                 marginRight: "16px",
               }}
             />
-            <span
-              style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "500" }}
-            >
+            <span style={{ fontSize: "1.3rem", fontWeight: "500" }}>
               ElBetunas
             </span>
           </div>
 
           {/* Centro: Menú */}
-          <ul className="nav justify-content-center gap-4 nav-text">
+          <ul className="nav justify-content-center gap-4 nav-text a-nav">
             <li className="nav-item">
               <a
                 className="nav-link"
@@ -61,33 +60,26 @@ export const Header = () => {
                 Experiencia
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link text-light" href="#">
-                Blog
-              </a>
-            </li>
           </ul>
 
           {/* Derecha: Iconos y botón modo oscuro */}
-          <div className="d-flex align-items-center gap-3">
+          <div className="d-flex align-items-center gap-3 iconos_nav">
             <a
               href="https://www.linkedin.com/in/elbetunas/"
               target="_blank"
-              className="text-light"
+              className="text-light icono"
             >
-              <FaLinkedin size={22} />
+              <FaLinkedin size={30} />
             </a>
             <a
               href="https://github.com/RmzGerardo"
               target="_blank"
               className="text-light"
             >
-              <FaGithub size={22} />
+              <FaGithub size={30} />
             </a>
             <button
-              className={`btn btn-sm ${
-                color ? "btn-warning" : "btn-dark"
-              } ms-2`}
+              className={`btn btn-sm ${color ? "btn-warning" : "btn-dark"} `}
               onClick={colorChange}
               style={{ borderRadius: "50%" }}
             >
