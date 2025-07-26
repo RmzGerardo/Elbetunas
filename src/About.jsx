@@ -26,7 +26,7 @@ export const About = () => {
                 }}
               >
                 Te contaría que mi primera experiencia con la programación fue
-                lo peor.
+                lo peor..
                 <br />
                 Pero mi amor por la tecnología me llevó a seguir aprendiendo y
                 ahora soy un apasionado de la programación.
