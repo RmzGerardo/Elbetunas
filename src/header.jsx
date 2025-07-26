@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BsCloudMoonFill, BsSunFill } from "react-icons/bs";
-import { FaTwitter, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import spider from "./img/spider.jpg"; // Asegúrate de que la ruta sea correcta
 
@@ -41,22 +41,19 @@ export const Header = () => {
           </div>
 
           {/* Centro: Menú */}
-          <ul className="nav justify-content-center gap-4 nav-text a-nav">
+          <ul className="nav nav-text a-nav gap-4">
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://www.linkedin.com/in/elbetunas/"
-              >
+              <a className="nav-link" href="#">
                 Inicio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">
+              <a className="nav-link" href="#">
                 Portafolio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">
+              <a className="nav-link" href="#">
                 Experiencia
               </a>
             </li>
@@ -74,12 +71,12 @@ export const Header = () => {
             <a
               href="https://github.com/RmzGerardo"
               target="_blank"
-              className="text-light"
+              className="text-light icono"
             >
               <FaGithub size={30} />
             </a>
             <button
-              className={`btn btn-sm ${color ? "btn-warning" : "btn-dark"} `}
+              className={`btn btn-sm ${color ? "btn-warning" : "btn-dark"}`}
               onClick={colorChange}
               style={{ borderRadius: "50%" }}
             >
@@ -97,15 +94,12 @@ export const Header = () => {
               loop={0}
               cursor
               cursorStyle="_"
-              typeSpeed={80}
-              deleteSpeed={50}
-              delaySpeed={1000}
+              typeSpeed={window.innerWidth <= 720 ? 120 : 80}
+              deleteSpeed={window.innerWidth <= 720 ? 80 : 50}
+              delaySpeed={window.innerWidth <= 720 ? 600 : 1000}
             />
           </h1>
         </div>
-        {/* <div className="col-auto d-flex justify-content-center align-items-center">
-          <img src={spider} className="img-circle" alt="Spider" />
-        </div> */}
       </div>
     </>
   );
