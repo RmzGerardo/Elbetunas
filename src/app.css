@@ -1,0 +1,20 @@
+body {
+  background-color: #1f2d40;
+  color: #fafafa;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #fff !important;
+}
+body.dark-mode h1 {
+  color: #fff !important;
+}
+
+body.dark-mode .navbar {
+  background-color: #000000 !important;
+}

@@ -1,0 +1,16 @@
+.titulo-animado {
+  color: #dbff5e;
+  font-weight: bold;
+  font-family: "Bitcount Prop Single", system-ui;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.nav-text {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.nav-text a {
+  color: #f9f16f;
+}
+
