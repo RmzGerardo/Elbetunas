@@ -27,13 +27,12 @@
     width: 100%;
     text-align: center;
   }
-  .nav-text a {
-    font-size: 18px;
-  }
+
   .iconos_nav {
     justify-content: center;
     width: 100%;
     text-align: center;
+    display: none;
   }
 }
 
@@ -55,6 +54,7 @@
     justify-content: center;
     width: 100%;
     text-align: center;
+    display: none;
   }
 }
 
@@ -76,5 +76,6 @@
     justify-content: center;
     width: 100%;
     text-align: center;
+    display: none;
   }
 }
