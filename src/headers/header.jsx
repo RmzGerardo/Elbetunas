@@ -38,7 +38,7 @@ export const Header = () => {
               <span
                 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "500" }}
               >
-                ElBetunas
+                Elbetunas
               </span>
             </div>
 
@@ -74,7 +74,7 @@ export const Header = () => {
               <a
                 href="https://www.linkedin.com/in/elbetunas/"
                 target="_blank"
-                className="text-light"
+                style={{ color: "#00ffe7" }}
               >
                 <FaLinkedin size={22} />
               </a>

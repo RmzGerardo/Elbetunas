@@ -61,7 +61,7 @@ export const About = () => {
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item">
-                    💻 Enfocado en el desarrollo de software moderno.
+                    💻 Preparandome en el desarrollo de software moderno.
                   </li>
                   <li className="list-group-item">
                     🔧 Técnico en Electrónica con habilidades en animaciones con
