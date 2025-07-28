@@ -1,4 +1,4 @@
-import spider from "../img/spider.jpg"; // Asegúrate de que la ruta sea correcta
+// import spider from "../img/spider.jpg"; // Asegúrate de que la ruta sea correcta
 import cubo from "../img/cubo.jpg"; // Asegúrate de que la ruta sea correcta
 import cubo_2 from "../img/cubo_2.jpg"; // Asegúrate de que la ruta sea correcta
 import cubo_3 from "../img/cubo_3.jpg"; // Asegúrate de que la ruta sea correcta
@@ -23,7 +23,8 @@ export const Life = () => {
           Proyectos Destacados
         </h2>
         <h5 className="text-center m-4">
-          Power By Quest Cancun 2024 <span class="badge bg-danger">New</span>
+          Power By Quest Cancun 2024{" "}
+          <span className="badge bg-danger">New</span>
         </h5>
         {/* <div className="text-center mb-3">
           <button className="btn btn-success life-detalle">Ver detalles</button>
