@@ -11,7 +11,7 @@ import "./portafolio/about.css";
 import { Portafolio } from "./about_main/Portafolio.jsx";
 import "./about_main/life.css";
 
-import { Footer } from "./footer/footer.jsx";
+import { Foteer } from "./footer/Foteer.jsx";
 import "./footer/footer.css";
 
 // global
@@ -22,6 +22,6 @@ createRoot(document.getElementById("root")).render(
     <Header />
     <About />
     <Portafolio />
-    <Footer />
+    <Foteer />
   </StrictMode>
 );

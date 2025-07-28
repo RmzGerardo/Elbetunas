@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
-export const Footer = () => {
+export const Foteer = () => {
   return (
     <>
       <footer
