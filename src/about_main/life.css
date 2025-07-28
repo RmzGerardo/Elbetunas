@@ -1,3 +1,16 @@
-.titulo_life {
-  color: pink;
+.timeline li {
+  position: relative;
+  padding-left: 24px;
+  border-left: 3px solid #00ffe7;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: #00ffe7;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
