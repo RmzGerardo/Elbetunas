@@ -1,8 +1,7 @@
 // import spider from "../img/spider.jpg"; // Asegúrate de que la ruta sea correcta
-import cubo from "../img/cubo.jpg"; // Asegúrate de que la ruta sea correcta
-import cubo_2 from "../img/cubo_2.jpg"; // Asegúrate de que la ruta sea correcta
 import cubo_3 from "../img/cubo_3.jpg"; // Asegúrate de que la ruta sea correcta
-import cubo_4 from "../img/cubo_4.jpg"; // Asegúrate de que la ruta sea correcta
+import cubo_2 from "../img/cubo_2.jpg"; // Asegúrate de que la ruta sea correcta
+import can4 from "../img/can4.jpg"; // Asegúrate de que la ruta sea correcta
 
 export const Portafolio = () => {
   const proyectos = [
@@ -30,28 +29,35 @@ export const Portafolio = () => {
           <button className="btn btn-success life-detalle">Ver detalles</button>
         </div> */}
         <div className="row justify-content-center ">
-          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+          <div className="col-6 col-md-4 mb-4 d-flex justify-content-center">
             <img
               src={cubo_2}
               alt=""
               style={{ width: "100%", borderRadius: "16px" }}
             />
           </div>
-          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+          <div className="col-6 col-md-4 mb-4 d-flex justify-content-center">
             <img
               src={cubo_3}
               alt=""
               style={{ width: "100%", borderRadius: "16px" }}
             />
           </div>
-          <div className="col-12 col-md-4 mb-4 d-flex justify-content-center">
+          <div className="col-6 col-md-4 mb-4 d-flex justify-content-center">
             <img
-              src={cubo_4}
+              src={cubo_3}
               alt=""
               style={{ width: "100%", borderRadius: "16px" }}
             />
           </div>
-          {/* ...más columnas si quieres */}
+
+          <div className="col-6 col-md-4 mb-4 d-flex justify-content-center">
+            <img
+              src={cubo_2}
+              alt=""
+              style={{ width: "100%", borderRadius: "16px" }}
+            />
+          </div>
         </div>
 
         <div
@@ -65,15 +71,9 @@ export const Portafolio = () => {
         >
           <div className="col-md-6 p-4 d-flex justify-content-center align-items-center">
             <img
-              className="img-fluid foto_carta"
-              src={cubo}
+              src={cubo_2}
               alt=""
-              style={{
-                maxWidth: "350px",
-                width: "100%",
-                borderRadius: "16px",
-                objectFit: "cover",
-              }}
+              style={{ width: "100%", borderRadius: "16px" }}
             />
           </div>
           <div className="col-md-6 p-4 d-flex flex-column justify-content-center">

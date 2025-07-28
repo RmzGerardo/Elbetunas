@@ -22,7 +22,7 @@ export const Header = () => {
         <nav className="navbar py-3" style={{ background: "#0a1a26" }}>
           <div className="container-fluid d-flex align-items-center justify-content-between">
             {/* Izquierda: Avatar y nombre */}
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center icono_movil">
               <img
                 src={spider}
                 alt="Avatar"
@@ -35,64 +35,69 @@ export const Header = () => {
                   marginRight: "16px",
                 }}
               />
-              <span
-                style={{ color: "#fff", fontSize: "1.3rem", fontWeight: "500" }}
-              >
+              <span style={{ fontSize: "1.3rem", fontWeight: "500" }}>
                 Elbetunas
               </span>
             </div>
 
             {/* Centro: Menú */}
-            <ul className="nav justify-content-center gap-4 nav-text">
+            <ul className="nav justify-content-center gap-4 nav-text mt-3 ">
               <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className="nav-link nav-text-movil"
                   href="https://www.linkedin.com/in/elbetunas/"
                 >
                   Inicio
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item nav-text-movil">
                 <a className="nav-link text-light" href="#">
                   Portafolio
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item nav-text-movil">
                 <a className="nav-link text-light" href="#">
                   Experiencia
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  Blog
                 </a>
               </li>
             </ul>
 
             {/* Derecha: Iconos y botón modo oscuro */}
-            <div className="d-flex align-items-center gap-3">
+            <div className="d-flex align-items-center gap-3 mt-3 iconos_nav">
               <a
                 href="https://www.linkedin.com/in/elbetunas/"
                 target="_blank"
                 style={{ color: "#00ffe7" }}
               >
-                <FaLinkedin size={22} />
+                <FaLinkedin size={25} />
               </a>
               <a
                 href="https://github.com/RmzGerardo"
                 target="_blank"
                 className="text-light"
               >
-                <FaGithub size={22} />
+                <FaGithub size={25} />
               </a>
               <button
-                className={`btn btn-sm ${
-                  color ? "btn-warning" : "btn-dark"
-                } ms-2`}
+                className={`btn ${color ? "btn-warning" : "btn-dark"} ms-2`}
                 onClick={colorChange}
-                style={{ borderRadius: "50%" }}
+                style={{
+                  borderRadius: "50%",
+                  width: "35px",
+                  height: "35px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 2px 8px #00ffe788",
+                  fontSize: "1.3rem",
+                }}
+                title="Cambiar modo oscuro/claro"
               >
-                {color ? <BsSunFill /> : <BsCloudMoonFill />}
+                {color ? (
+                  <BsSunFill size={20} />
+                ) : (
+                  <BsCloudMoonFill size={20} />
+                )}
               </button>
             </div>
           </div>

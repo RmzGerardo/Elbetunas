@@ -1,4 +1,4 @@
-import spider from "../img/spider.jpg"; // Asegúrate de que la ruta sea correcta
+import spider from "../img/spider.jpg";
 
 export const About = () => {
   return (
@@ -22,7 +22,9 @@ export const About = () => {
                 style={{
                   color: "#cfcfcf",
                   fontSize: "1.2rem",
+                  fontWeight: "500",
                 }}
+                className="mt-2"
               >
                 Te contaría que mi primera experiencia con la programación fue
                 lo peor.
@@ -33,23 +35,14 @@ export const About = () => {
               <a
                 href="/downlands/joystick.png"
                 download
-                className="btn btn-cv mt-4"
-                style={{
-                  background: "#00ffe7",
-                  color: "#232136",
-                  fontWeight: "bold",
-                  borderRadius: "2em",
-                  padding: "0.7em 2em",
-                  boxShadow: "0 4px 16px #00ffe788",
-                  fontSize: "1.1rem",
-                  border: "none",
-                }}
+                className="btn btn-descargar btn-cv mt-4"
               >
                 Descargar CV
               </a>
             </div>
+
             {/* Columna de imagen */}
-            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center ">
+            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-5">
               <div className="card carta-tamaño carta ">
                 <img className="card-img-top" src={spider} alt="Gerardo" />
                 <div className="card-body carta">
