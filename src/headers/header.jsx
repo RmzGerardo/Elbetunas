@@ -4,6 +4,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import spider from "../img/spider.jpg";
 
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   const [color, setColor] = useState(false);
 
@@ -19,7 +21,10 @@ export const Header = () => {
   return (
     <>
       <header>
-        <nav className="navbar py-3" style={{ background: "#0a1a26" }}>
+        <nav
+          className="navbar fixed-top py-3"
+          style={{ background: "#0a1a26" }}
+        >
           <div className="container-fluid d-flex align-items-center justify-content-between">
             {/* Izquierda: Avatar y nombre */}
             <div className="d-flex align-items-center icono_movil">
@@ -43,17 +48,18 @@ export const Header = () => {
             {/* Centro: Menú */}
             <ul className="nav justify-content-center gap-4 nav-text mt-3 ">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link nav-text-movil"
                   href="https://www.linkedin.com/in/elbetunas/"
+                  to="/"
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="nav-item nav-text-movil">
-                <a className="nav-link text-light" href="#">
+                <Link className="nav-link text-light" to="/portafolio">
                   Portafolio
-                </a>
+                </Link>
               </li>
               <li className="nav-item nav-text-movil">
                 <a className="nav-link text-light" href="#">
@@ -107,12 +113,12 @@ export const Header = () => {
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <h1 className="text-center titulo-animado">
               <Typewriter
-                words={["Elbetunas", "Bienvenido", "Portafolio React"]}
+                words={["Elbetunas", "Bienvenido@ Dev", "Portafolio React"]}
                 loop={0}
                 cursor
                 cursorStyle="_"
                 typeSpeed={80}
-                deleteSpeed={50}
+                deleteSpeed={60}
                 delaySpeed={1000}
               />
             </h1>

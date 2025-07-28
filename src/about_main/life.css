@@ -1,16 +1,14 @@
-.timeline li {
-  position: relative;
-  padding-left: 24px;
-  border-left: 3px solid #00ffe7;
+.section-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: sectionFadeUp 0.8s forwards;
 }
-.timeline li::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  top: 8px;
-  width: 14px;
-  height: 14px;
-  background: #00ffe7;
-  border-radius: 50%;
-  border: 2px solid #fff;
+
+img:hover {
+  /* transiscion de movieento hacia los lados */
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 32px rgba(57, 212, 223, 0.2);
 }
+
+
