@@ -49,7 +49,7 @@ export const Header = () => {
                   className="nav-link"
                   href="https://www.linkedin.com/in/elbetunas/"
                 >
-                  Inic
+                  Inicio
                 </a>
               </li>
               <li className="nav-item">
