@@ -36,7 +36,8 @@ export const About = () => {
                 desarrollador de software. Me especializo en proyectos de
                 iluminación LED y animaciones con código. Ademas mi formacion
                 como Desarrollador me permite crear aplicaciones web modernas y
-                eficientes.
+                eficientes. Siempre estoy buscando nuevos retos y oportunidades
+                para crecer en el mundo del desarrollo.
               </p>
               <div className="led-strip">
                 {Array.from({ length: 20 }).map((_, i) => (
