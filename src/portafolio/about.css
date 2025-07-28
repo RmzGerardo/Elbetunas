@@ -129,12 +129,12 @@ button.btn.btn-descargar:hover {
 
 @media (max-width: 470px) {
   main.section-fade-up {
-    margin-top: 20px !important; /* Ajusta el valor según la altura real de tu nav */
+    margin-top: 10px !important; /* Ajusta el valor según la altura real de tu nav */
   }
 }
 
 @media (max-width: 768px) {
   main.section-fade-up {
-    margin-top: 20px !important; /* Ajusta el valor según la altura de tu nav */
+    margin-top: 10px !important; /* Ajusta el valor según la altura de tu nav */
   }
 }

@@ -21,10 +21,7 @@ export const Header = () => {
   return (
     <>
       <header>
-        <nav
-          className="navbar fixed-top py-3"
-          style={{ background: "#0a1a26" }}
-        >
+        <nav className="navbar py-3" style={{ background: "#0a1a26" }}>
           <div className="container-fluid d-flex align-items-center justify-content-between">
             {/* Izquierda: Avatar y nombre */}
             <div className="d-flex align-items-center icono_movil">
@@ -109,7 +106,7 @@ export const Header = () => {
           </div>
         </nav>
 
-        <div className="row align-items-center justify-content-center m-4">
+        <div className="row align-items-center justify-content-center m-5">
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <h1 className="text-center titulo-animado">
               <Typewriter
