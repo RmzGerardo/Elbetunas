@@ -4,7 +4,7 @@ import cubo_2 from "../img/cubo_2.jpg"; // Asegúrate de que la ruta sea correct
 import cubo_3 from "../img/cubo_3.jpg"; // Asegúrate de que la ruta sea correcta
 import cubo_4 from "../img/cubo_4.jpg"; // Asegúrate de que la ruta sea correcta
 
-export const Life = () => {
+export const Portafolio = () => {
   const proyectos = [
     {
       nombre: "Proyecto Power by Quest",

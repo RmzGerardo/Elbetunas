@@ -8,7 +8,7 @@ import "./headers/headers.css";
 import { About } from "./portafolio/About.jsx";
 import "./portafolio/about.css";
 
-import { Life } from "./about_main/life.jsx";
+import { Portafolio } from "./about_main/Portafolio.jsx";
 import "./about_main/life.css";
 
 import { Footer } from "./footer/footer.jsx";
@@ -21,7 +21,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Header />
     <About />
-    <Life />
+    <Portafolio />
     <Footer />
   </StrictMode>
 );
