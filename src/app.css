@@ -1,0 +1,33 @@
+body {
+  background-color: #1f2d40;
+  color: #fafafa;
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+body.dark-mode a {
+  color: #fff !important;
+}
+body.dark-mode h1 {
+  color: #fff !important;
+}
+
+body.dark-mode .navbar {
+  background-color: #000000 !important;
+}
+body.dark-mode .footer-dark {
+  background-color: #000000 !important;
+}
+body.dark-mode .carta-foto {
+  background-color: #1b1616 !important;
+  /* color: #fff !important; */
+}
+body.dark-mode .text-life {
+  /* background-color: #1b1616 !important; */
+  color: #fff !important;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
