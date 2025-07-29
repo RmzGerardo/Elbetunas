@@ -110,25 +110,21 @@ export const Header = () => {
           </div>
         </nav>
 
-        {/* ...navbar... */}
-        {/* Solo muestra el texto animado en la ruta raíz */}
-        {location.pathname === "/" && (
-          <div className="row align-items-center justify-content-center m-5">
-            <div className="col-auto d-flex flex-column justify-content-center align-items-center">
-              <h1 className="text-center titulo-animado">
-                <Typewriter
-                  words={["Elbetunas", "Bienvenido@ Dev", "Portafolio React"]}
-                  loop={0}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={80}
-                  deleteSpeed={60}
-                  delaySpeed={1000}
-                />
-              </h1>
-            </div>
+        <div className="row align-items-center justify-content-center m-5">
+          <div className="col-auto d-flex flex-column justify-content-center align-items-center">
+            <h1 className="text-center titulo-animado">
+              <Typewriter
+                words={["Elbetunas", "Bienvenido@ Dev", "Portafolio React"]}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={80}
+                deleteSpeed={60}
+                delaySpeed={1000}
+              />
+            </h1>
           </div>
-        )}
+        </div>
       </header>
     </>
   );
