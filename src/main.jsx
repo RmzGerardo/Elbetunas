@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./headers/header.jsx";
 
-
 import { About } from "./portafolio/About.jsx";
 import "./portafolio/about.css";
 
