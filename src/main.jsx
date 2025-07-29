@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Header } from "./headers/header.jsx";
-import "./headers/headers.css";
+
 
 import { About } from "./portafolio/About.jsx";
 import "./portafolio/about.css";
