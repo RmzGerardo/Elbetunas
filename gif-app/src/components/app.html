@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Actividades</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4 text-center">📅 Calendario de Estudio</h1>
+        <p class="text-center text-sm mb-6">Del <strong>23 de julio</strong> al <strong>11 de septiembre</strong></p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Lunes a Viernes -->
+            <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                <h2 class="text-xl font-semibold mb-2">Lunes a Viernes</h2>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><span class="text-blue-400 font-medium">3:00 PM - 5:00 PM</span>: Curso de React (Fernando
+                        Herrera)</li>
+                    <li><span class="text-yellow-400 font-medium">5:00 PM - 7:00 PM</span>: Curso de JavaScript</li>
+                    <li><span class="text-green-400">⚠️ Meta:</span> Terminar App en React antes del 31 de agosto</li>
+                </ul>
+            </div>
+
+            <!-- Sábado y Domingo -->
+            <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                <h2 class="text-xl font-semibold mb-2">Sábado y Domingo</h2>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><span class="text-blue-400 font-medium">3:00 PM - 7:00 PM</span>: Curso de React (Fernando
+                        Herrera)</li>
+                    <li><span class="text-purple-400 font-medium">7:00 PM - 9:00 PM</span>: Curso de PHP</li>
+                </ul>
+            </div>
+
+            <!-- Objetivo Final -->
+            <div class="bg-gray-700 p-4 rounded-xl shadow-md flex flex-col justify-between">
+                <h2 class="text-xl font-semibold mb-2">🎯 Objetivos</h2>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>✅ Terminar App de React antes del <strong>31 de agosto</strong></li>
+                    <li>📘 Completar curso completo de React</li>
+                    <li>📗 Completar curso de JavaScript</li>
+                    <li>📙 Avanzar en curso de PHP los fines de semana</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- JS dinámico futuro -->
+        <div class="mt-10 text-center">
+            <p class="text-gray-400">(En el futuro puedes agregar una tabla por fecha con JavaScript si quieres ver todo
+                por día)</p>
+        </div>
+    </div>
+</body>
+
+</html>
