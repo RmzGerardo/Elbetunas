@@ -114,7 +114,12 @@ export const Header = () => {
           <div className="col-auto d-flex flex-column justify-content-center align-items-center">
             <h1 className="text-center titulo-animado">
               <Typewriter
-                words={["Elbetunas", "Bienvenido@ Dev", "Portafolio React"]}
+                words={[
+                  "Elbetunas",
+                  "Bienvenido@ Dev",
+                  "Portafolio React",
+                  "Desarrollador de software",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle="_"
