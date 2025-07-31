@@ -1,36 +1,20 @@
-import { getGifs } from "../helpers/getGifs";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { Gifitem } from "./Gifitem";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GifGrid = ({ categorias }) => {
-  // creamos un estado para almacenar las imagenes
-  const [images, setImages] = useState([]);
-
-  const getImages = async () => {
-    const newImages = await getGifs(categorias);
-    setImages(newImages);
-    console.log(newImages);
-    // console.log(categorias);
-    // ya me trae los datos de la imagen, ahora quiero el id
-    // console.log(newImages.map((img) => img.title));
-  };
-
-  useEffect(() => {
-    getImages();
-  }, []);
+  const { images, isLoading } = useFetchGifs(categorias);
+  console.log(isLoading);
 
   return (
     <>
-      <h4>
-        {/* imprimimos el titulo */}
-        <ul>
-          {images.map((img) => (
-            <li key={img.id}>
-              <p>{img.title}</p>
-              <img src={img.url} alt={img.title} />
-            </li>
-          ))}
-        </ul>
-      </h4>
+      {isLoading && <h2>Cargando...</h2>}
+      {/* imprimimos el titulo */}
+      <div className="card-grid">
+        {images.map((img) => (
+          <Gifitem key={img.id} {...img} />
+        ))}
+      </div>
     </>
   );
 };

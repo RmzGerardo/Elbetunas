@@ -3,13 +3,13 @@ import { AddCategory } from "./components/addCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifApp = () => {
-  const [categorias, setcategorias] = useState(["programing"]);
+  const [categorias, setcategorias] = useState(["developer"]);
 
   const agregarCategoria = (newCategory) => {
     if (categorias.includes(newCategory)) return;
     console.log(newCategory);
 
-    setcategorias([...categorias, newCategory]);
+    setcategorias([newCategory, ...categorias]);
   };
 
   return (
