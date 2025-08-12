@@ -6,6 +6,8 @@ import { CounterApp } from "./CounterApp";
 import { Use_01 } from "./Use_01";
 import { CustomHook } from "./CustomHook";
 import { UseEffect } from "./useEffect/UseEffect";
+import { Message } from "./useEffect/Message";
+import { UseForm } from "./useEffect/useForm";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,5 +16,6 @@ createRoot(document.getElementById("root")).render(
     <Use_01 />
     <CustomHook /> */}
     <UseEffect />
+    <UseForm />
   </StrictMode>
 );
