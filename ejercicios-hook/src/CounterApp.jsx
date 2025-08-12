@@ -22,6 +22,7 @@ export const CounterApp = () => {
 
   const add = () => {
     setItems([...items, inputValue]);
+    setInputValue("");
   };
 
   // * estado con texto
@@ -58,6 +59,7 @@ export const CounterApp = () => {
             ...state,
             counter1: counter1 + 1,
             counter2: counter2 + 1,
+            counter3: counter3 + 1,
           })
         }
       >
@@ -86,6 +88,7 @@ export const CounterApp = () => {
           <li key={index}>{item}</li>
         ))}
       </ul>
+      <hr />
     </>
   );
 };
