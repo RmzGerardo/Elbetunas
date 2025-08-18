@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { Primer } from './Primer';
+import { ItemCounter } from './assets/carrito/ItemCounter';
+import { AppAwesome } from './AppAwesome';
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <AppAwesome/>
   </StrictMode>,
 )
