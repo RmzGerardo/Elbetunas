@@ -1,0 +1,43 @@
+.nav-color {
+  background-color: #1b1750;
+  padding: 10px;
+}
+
+.title_poke {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px 10px 0 10px;
+  padding: 30px 10px 0 10px;
+}
+
+.nav-item > a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.card-poke {
+  background-color: #bbbbbc;
+  margin-top: 40px; /* <-- agrega esta línea */
+}
+
+.card {
+  background-color: #c76700;
+  /* height: 100px !important; */
+  width: 500px;
+}
+
+img {
+  width: 50px;
+}
+
+/* practica card */
+
+.cards {
+  background-color: #1b1750 !important;
+  max-width: 500px;
+  border-radius: 20px;
+  color: #fff;
+  max-height: 300px;
+}
