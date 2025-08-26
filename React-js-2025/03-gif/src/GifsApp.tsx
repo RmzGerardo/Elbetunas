@@ -1,7 +1,8 @@
-import { mockGifs } from "./mock-data/gifs.mock"
 import { Buscar } from "./shared/components/Buscar"
 import { Header } from "./shared/components/Header"
 import { PreviouSearches } from "./gifs/PreviouSearches"
+import { GifsList } from "./shared/components/GifsList"
+import { mockGifs } from "./mock-data/gifs.mock"
 
 
 export const GifsApp = () => {
@@ -15,21 +16,9 @@ export const GifsApp = () => {
     <PreviouSearches  />
    
 
+    <GifsList gifs={mockGifs}/>
   
-    <div className="gifs-container">
-       {
-  mockGifs.map(gif => (
-    <div key={gif.id} className="gif-item">
-      <img src={gif.url} alt={gif.title} />
-      <h3>{gif.title}</h3>
-      <p>
-        {gif.width}x{gif.height}(1.5mb)
-      </p>
-    </div>
-  ))
-}
-        
-    </div>
+
 
     </>
   )
