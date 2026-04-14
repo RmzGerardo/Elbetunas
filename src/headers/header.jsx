@@ -64,7 +64,7 @@ export const Header = () => {
               </li>
               <li className="nav-item nav-text-movil">
                 <a className="nav-link text-light" href="#">
-                  Experienci
+                  Experiencia
                 </a>
               </li>
             </ul>
