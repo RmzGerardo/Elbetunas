@@ -1,11 +1,11 @@
-import { Header } from "./General/components/Header";
-import { Container } from "./General/components/Container";
+import { Header } from "./components/Header";
+import { Main_Content } from "./components/Main_Content";
 
 export const App = () => {
   return (
     <>
       <Header />
-      <Container />
+      <Main_Content />
     </>
   );
 };

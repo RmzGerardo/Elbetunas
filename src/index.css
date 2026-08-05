@@ -1,0 +1,47 @@
+/* src/index.css */
+@import "tailwindcss";
+
+body {
+  background-color: #0b0f19;
+  color: #f8fafc;
+}
+
+/* navbar */
+.nickName {
+  color: #ffffff;
+}
+
+.keys {
+  color: #f43f5e; /* Un rojo coral/rosa moderno y menos agresivo */
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/* main content */
+.info {
+  color: #818cf8; /* Un tono índigo brillante y legible sobre fondo oscuro */
+}
+
+.name {
+  background: linear-gradient(to right, #ffffff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.job,
+.info_personal {
+  color: #94a3b8; /* Gris azulado moderno (slate-400) en lugar del gris genérico */
+}
+
+button {
+  cursor: pointer;
+}
