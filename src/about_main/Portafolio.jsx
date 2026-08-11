@@ -1,5 +1,10 @@
-import cubo_3 from "../img/cubo_3.jpg";
+import SUGO from "../img/RTP.jpg";
+import admin from "../img/admin.png";
+import siteg from "../img/siteg.png";
 import cubo_2 from "../img/cubo_2.jpg";
+import cubo_3 from "../img/cubo_3.jpg";
+import cubo_4 from "../img/cubo_4.jpg";
+
 import q_6 from "../img/quest/q_6.jpg";
 import q_9 from "../img/quest/q_9.jpg";
 import q_8 from "../img/quest/q_8.jpg";
@@ -15,39 +20,50 @@ import f_5 from "../img/fascinoma/f_5.mp4";
 import { useEffect } from "react";
 
 export const Portafolio = () => {
-  useEffect(() => {
-    // Espera a que el DOM esté listo
-    const toastEl = document.getElementById("miToast");
-    if (toastEl && window.bootstrap) {
-      const toast = new window.bootstrap.Toast(toastEl);
-      toast.show();
-    }
-  }, []);
-
   const proyectos = [
     {
+      id: "modalProyecto1",
       nombre: "Proyecto Power by Quest",
+      subtitulo: "Iluminación & Electrónica",
       descripcion:
-        "Instalacion de leds para evento musical en Cancun programados con arduino y python.",
+        "Instalación de LEDs a gran escala para un escenario musical en Cancún, programada y controlada con Arduino y Python.",
       imagen: q_6,
-      codigo: "https://github.com/...",
-      demo: "https://demo.com",
+      codigo: "https://github.com/RmzGerardo",
+      demo: "https://www.linkedin.com/in/elbetunas/",
+      tecnologias: ["Arduino", "Python", "LEDs"],
     },
     {
-      nombre: "Logo Apple Music NeonFlex",
+      id: "modalProyecto2",
+      nombre: "Sistema de Control de Inventario y Flota",
+      subtitulo: "Programación Full-Stack",
       descripcion:
-        "Elaboracion de logo APPLE MUSIC con NeonFlex, programado con controlador WiFi.",
-      imagen: a_2,
-      codigo: "https://github.com/...",
-      demo: "https://demo.com",
+        "Sistema web de administración interna para despachos, salidas y mantenimiento de los autobuses de la Red de Transporte de Pasajeros de la Ciudad de México.",
+      imagen: SUGO,
+      codigo: "https://github.com/RmzGerardo",
+      demo: "https://www.linkedin.com/in/elbetunas/",
+      tecnologias: ["React", "Express", "PostgreSQL", "Docker", "PrimeReact"],
     },
     {
-      nombre: "Evento Fascinoma 2024",
+      id: "modalProyecto3",
+      nombre: "Sistema de permisos para módulos internos de RTP",
+      subtitulo: "Programación Full-Stack",
       descripcion:
-        "Instalacion de escuadras leds con una consola de dmx hecha con rassberry pi.",
-      imagen: f_1,
-      codigo: "https://github.com/...",
-      demo: "https://demo.com",
+        "Sistema de permisos para dar de alta, baja y asignar roles en los diferentes sistemas internos de la RTP.",
+      imagen: admin,
+      codigo: "https://github.com/RmzGerardo",
+      demo: "https://www.linkedin.com/in/elbetunas/",
+      tecnologias: ["PHP", "JavaScript", "PostgreSQL", "Bootstrap"],
+    },
+    {
+      id: "modalProyecto4",
+      nombre: "Contenedor de Sistemas Integrados",
+      subtitulo: "Programación Full-Stack",
+      descripcion:
+        "Plataforma web diseñada para centralizar y alojar múltiples sistemas en un solo contenedor, facilitando el acceso a todos ellos con un solo clic.",
+      imagen: siteg,
+      codigo: "https://github.com/RmzGerardo",
+      demo: "https://www.linkedin.com/in/elbetunas/",
+      tecnologias: ["JavaScript", "PostgreSQL", "PHP", "Docker", "GitHub Actions"],
     },
   ];
 
@@ -84,7 +100,7 @@ export const Portafolio = () => {
 
       {/* ... */}
       <section className="container my-5 section-fade-up">
-        <h2 className="text-center mb-1" style={{ color: "#00ffe7" }}>
+        <h2 className="text-center mb-1" style={{ color: "#4fa3e3" }}>
           Proyectos Destacados
         </h2>
 
@@ -141,44 +157,122 @@ export const Portafolio = () => {
           </div>
         </div> */}
 
-        <div className="row justify-content-center">
-          {proyectos.map((proyectos, i) => (
+        <div className="row justify-content-center g-4">
+          {proyectos.map((proyecto, i) => (
             <div
-              className="col-12 col-md-4 mt-4 d-flex flex-column align-items-center"
+              className="col-12 col-md-6 col-lg-3 mt-4 d-flex justify-content-center"
               key={i}
             >
-              <img
-                src={proyectos.imagen}
+              <div
+                className="project-card"
                 style={{
-                  width: "90%",
-                  height: "300px",
-                  borderRadius: "16px",
+                  background: "rgba(255, 255, 255, 0.03)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  width: "100%",
+                  maxWidth: "300px",
                   cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
+                  transition:
+                    "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
                 }}
                 data-bs-toggle="modal"
-                data-bs-target="#modalProyecto1"
-              />
-              <h5 className="text-center m-2">
-                {proyectos.nombre} <span className="badge bg-danger">New</span>
-              </h5>
-              <p className="text-center" style={{ color: "#fafafa" }}>
-                {proyectos.descripcion}
-              </p>
-              <div>
-                <a
-                  href={proyectos.codigo}
-                  className="btn btn-sm btn-outline-info me-2"
-                  target="_blank"
+                data-bs-target={`#${proyecto.id}`}
+              >
+                <div
+                  style={{
+                    overflow: "hidden",
+                    height: "180px",
+                    position: "relative",
+                  }}
                 >
-                  Código
-                </a>
-                <a
-                  href={proyectos.demo}
-                  className="btn btn-sm btn-outline-success"
-                  target="_blank"
+                  <img
+                    src={proyecto.imagen}
+                    alt={proyecto.nombre}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform 0.5s ease",
+                    }}
+                    className="project-card-img"
+                  />
+                  <span
+                    className="position-absolute badge"
+                    style={{
+                      backgroundColor: proyecto.subtitulo.includes("Electrónica")
+                        ? "#e53e3e"
+                        : "#1e7cc9",
+                      color: "#ffffff",
+                      fontWeight: "bold",
+                      fontSize: "0.75rem",
+                      borderRadius: "8px",
+                      top: "12px",
+                      left: "12px",
+                    }}
+                  >
+                    {proyecto.subtitulo}
+                  </span>
+                </div>
+                <div
+                  className="p-3 d-flex flex-column justify-content-between flex-grow-1"
+                  style={{ minHeight: "200px" }}
                 >
-                  Demo
-                </a>
+                  <div>
+                    <h5
+                      className="fw-bold mb-2 text-white"
+                      style={{ fontSize: "1.05rem" }}
+                    >
+                      {proyecto.nombre}
+                    </h5>
+                    <p
+                      style={{
+                        color: "#cfcfcf",
+                        fontSize: "0.85rem",
+                        lineHeight: "1.5",
+                        margin: 0,
+                      }}
+                    >
+                      {proyecto.descripcion}
+                    </p>
+                    <div className="d-flex flex-wrap gap-1 mt-3">
+                      {proyecto.tecnologias &&
+                        proyecto.tecnologias.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            style={{
+                              fontSize: "0.68rem",
+                              padding: "2px 8px",
+                              background: "rgba(30, 124, 201, 0.15)",
+                              border: "1px solid rgba(30, 124, 201, 0.3)",
+                              borderRadius: "12px",
+                              color: "#90cdf4",
+                              fontWeight: "500",
+                            }}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
+                  <div
+                    className="d-flex justify-content-center align-items-center mt-3 pt-2"
+                    style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+                  >
+                    <span
+                      className="fw-bold"
+                      style={{ color: "#4fa3e3", fontSize: "0.85rem" }}
+                    >
+                      Ver detalles{" "}
+                      <i
+                        className="fas fa-arrow-right ms-1"
+                        style={{ fontSize: "0.75rem" }}
+                      ></i>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -194,23 +288,23 @@ export const Portafolio = () => {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg modal-dialog-centered">
-          <div className="modal-content" style={{ background: "#232136" }}>
-            <div className="modal-header border-0">
+          <div className="modal-content custom-modal">
+            <div className="modal-header custom-header">
               <h5
-                className="modal-title"
+                className="modal-title fw-bold"
                 id="modalProyecto1Label"
-                style={{ color: "#00ffe7" }}
+                style={{ color: "#4fa3e3" }}
               >
                 Power By Quest Cancun 2024
               </h5>
               <button
                 type="button"
-                className="btn-close"
+                className="btn-close btn-close-white"
                 data-bs-dismiss="modal"
                 aria-label="Cerrar"
               ></button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body custom-body">
               {/* Carrusel Bootstrap */}
               <div
                 id="carouselProyecto1"
@@ -220,7 +314,7 @@ export const Portafolio = () => {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <img
-                      src={cubo_2}
+                      src={SUGO}
                       className="d-block w-100 rounded"
                       alt="Foto 1"
                       style={{
@@ -282,7 +376,6 @@ export const Portafolio = () => {
                       muted
                     />
                   </div>
-                  {/* Puedes agregar más imágenes aquí */}
                 </div>
                 <button
                   className="carousel-control-prev"
@@ -313,6 +406,288 @@ export const Portafolio = () => {
                 Instalación de leds para evento musical en Cancún programados
                 con arduino y python.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal Proyecto 2 */}
+      <div
+        className="modal fade"
+        id="modalProyecto2"
+        tabIndex="-1"
+        aria-labelledby="modalProyecto2Label"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-lg modal-dialog-centered">
+          <div className="modal-content custom-modal">
+            <div className="modal-header custom-header">
+              <h5
+                className="modal-title fw-bold"
+                id="modalProyecto2Label"
+                style={{ color: "#4fa3e3" }}
+              >
+                Sistema de Gestión Operativa de Autobuses de RTP
+              </h5>
+              <button
+                type="button"
+                className="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div className="modal-body custom-body text-light">
+              <div className="row g-4">
+                <div className="col-12 col-md-5 d-flex align-items-center">
+                  <div className="modal-img-container w-100">
+                    <img
+                      src={SUGO}
+                      className="w-100"
+                      alt="RTP Project"
+                      style={{ maxHeight: "300px", objectFit: "cover" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-12 col-md-7">
+                  <h6 className="modal-label">
+                    <i className="fas fa-file-alt"></i> Descripción del Proyecto
+                  </h6>
+                  <p
+                    style={{
+                      color: "#cfcfcf",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.6",
+                    }}
+                  >
+                    Principalmente le di mantenimiento al sistema{" "}
+                    <strong>(versión 1)</strong>, el cual está construido con
+                    React (JSX) con Express y PostgreSQL. Todo esto con Docker.
+                    <br />
+                    Ya que el sistema era legado, tuve que tomar la decisión de
+                    rehacerlo con nuevas versiones de React y Express.
+                  </p>
+                  <h6 className="modal-label">
+                    <i className="fas fa-list-ul"></i> Características Clave
+                  </h6>
+                  <ul className="modal-feature-list">
+                    <li>
+                      Monitoreo 24/7 del sistema para un correcto
+                      funcionamiento.
+                    </li>
+                    <li>
+                      Nuevas funciones con la versión 2 del sistema (Carga de
+                      archivos tipo CSV para la carga masiva de datos).
+                    </li>
+                    <li>
+                      Código basado en componentes, esto facilita el
+                      mantenimiento.
+                    </li>
+                  </ul>
+                  <h6 className="modal-label">
+                    <i className="fas fa-laptop-code"></i> Tecnologías Utilizadas
+                  </h6>
+                  <div className="d-flex flex-wrap mt-2">
+                    <span className="badge modal-tech-badge">
+                      React.js
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      Express
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      PostgreSQL
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      Bootstrap Y PrimeReact
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      Docker
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal Proyecto 3 */}
+      <div
+        className="modal fade"
+        id="modalProyecto3"
+        tabIndex="-1"
+        aria-labelledby="modalProyecto3Label"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-lg modal-dialog-centered">
+          <div className="modal-content custom-modal">
+            <div className="modal-header custom-header">
+              <h5
+                className="modal-title fw-bold"
+                id="modalProyecto3Label"
+                style={{ color: "#4fa3e3" }}
+              >
+                Sistema de permisos para módulos internos de RTP
+              </h5>
+              <button
+                type="button"
+                className="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div className="modal-body custom-body text-light">
+              <div className="row g-4">
+                <div className="col-12 col-md-5 d-flex align-items-center">
+                  <div className="modal-img-container w-100">
+                    <img
+                      src={admin}
+                      className="w-100"
+                      alt="Permissions Project"
+                      style={{ maxHeight: "300px", objectFit: "cover" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-12 col-md-7">
+                  <h6 className="modal-label">
+                    <i className="fas fa-file-alt"></i> Descripción del Proyecto
+                  </h6>
+                  <p
+                    style={{
+                      color: "#cfcfcf",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.6",
+                    }}
+                  >
+                    Realicé un diseño completamente nuevo basado en el diseño
+                    anterior, poniendo más innovación al diseño de la interfaz,
+                    usando JavaScript moderno y PHP.
+                  </p>
+                  <h6 className="modal-label">
+                    <i className="fas fa-list-ul"></i> Características Clave
+                  </h6>
+                  <ul className="modal-feature-list">
+                    <li>
+                      Alta, baja y modificación de usuarios y cuentas de
+                      sistemas internos.
+                    </li>
+                    <li>
+                      Asignación dinámica de roles y permisos granulares por
+                      módulo operativo.
+                    </li>
+                    <li>
+                      Interfaz de administración fluida con navegación y carga
+                      de datos optimizadas.
+                    </li>
+                    <li>
+                      Historial y bitácora de auditoría para el control de
+                      cambios de seguridad.
+                    </li>
+                  </ul>
+                  <h6 className="modal-label">
+                    <i className="fas fa-laptop-code"></i> Tecnologías Utilizadas
+                  </h6>
+                  <div className="d-flex flex-wrap mt-2">
+                    <span className="badge modal-tech-badge">
+                      PHP
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      JavaScript (ES6+)
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      PostgreSQL
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      Bootstrap
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal Proyecto 4 */}
+      <div
+        className="modal fade"
+        id="modalProyecto4"
+        tabIndex="-1"
+        aria-labelledby="modalProyecto4Label"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-lg modal-dialog-centered">
+          <div className="modal-content custom-modal">
+            <div className="modal-header custom-header">
+              <h5
+                className="modal-title fw-bold"
+                id="modalProyecto4Label"
+                style={{ color: "#4fa3e3" }}
+              >
+                Contenedor de Sistemas Integrados
+              </h5>
+              <button
+                type="button"
+                className="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div className="modal-body custom-body text-light">
+              <div className="row g-4">
+                <div className="col-12 col-md-5 d-flex align-items-center">
+                  <div className="modal-img-container w-100">
+                    <img
+                      src={siteg}
+                      className="w-100"
+                      alt="Integrated Systems Project"
+                      style={{ maxHeight: "300px", objectFit: "cover" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-12 col-md-7">
+                  <h6 className="modal-label">
+                    <i className="fas fa-file-alt"></i> Descripción del Proyecto
+                  </h6>
+                  <p
+                    style={{
+                      color: "#cfcfcf",
+                      fontSize: "0.95rem",
+                      lineHeight: "1.6",
+                    }}
+                  >
+                    Realicé la arquitectura de carpetas, la estructura de código y las funciones que serán reutilizables, usando export, async-await y el DOM como puntos fuertes.
+                  </p>
+                  <h6 className="modal-label">
+                    <i className="fas fa-list-ul"></i> Características Clave
+                  </h6>
+                  <ul className="modal-feature-list">
+                    <li>Documentación basada en arquitectura monolítica.</li>
+                    <li>Implementación de contenedores (Docker).</li>
+                    <li>Desarrollo de funciones basadas en escribir menos código.</li>
+                    <li>Implementación de GitHub Actions para automatizar Git.</li>
+                  </ul>
+                  <h6 className="modal-label">
+                    <i className="fas fa-laptop-code"></i> Tecnologías Utilizadas
+                  </h6>
+                  <div className="d-flex flex-wrap mt-2">
+                    <span className="badge modal-tech-badge">
+                      JavaScript (ES6+)
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      PostgreSQL
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      PHP
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      Docker
+                    </span>
+                    <span className="badge modal-tech-badge">
+                      GitHub Actions
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

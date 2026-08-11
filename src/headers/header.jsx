@@ -42,7 +42,7 @@ export const Header = () => {
                 }}
               />
               <span style={{ fontSize: "1.3rem", fontWeight: "500" }}>
-                Elbetuna
+                Elbetunas
               </span>
             </div>
 
@@ -61,11 +61,6 @@ export const Header = () => {
                 <Link className="nav-link text-light" to="/portafolio">
                   Portafolio
                 </Link>
-              </li>
-              <li className="nav-item nav-text-movil">
-                <a className="nav-link text-light" href="#">
-                  Experiencia
-                </a>
               </li>
             </ul>
 

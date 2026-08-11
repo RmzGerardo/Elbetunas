@@ -14,6 +14,27 @@
   font-size: 15px;
 }
 
+/* Estilos modernos para la lista de la tarjeta */
+.carta .list-group {
+  background-color: transparent !important;
+}
+
+.carta .list-group-item {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 20px;
+  transition: background-color 0.25s ease, padding-left 0.25s ease;
+}
+
+.carta .list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  padding-left: 26px; /* Efecto sutil de desplazamiento al pasar el cursor */
+}
+
 .carta-tamaño:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);

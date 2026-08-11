@@ -15,3 +15,101 @@ img:hover {
   color: #000;
   font-family: "Noto Sans", sans-serif;
 }
+
+/* Efectos Premium Modernos para las Tarjetas de Proyectos */
+.project-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 30px rgba(30, 124, 201, 0.25) !important;
+  border-color: #1e7cc9 !important;
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.08) !important;
+}
+
+/* Modales Premium Modernos */
+.modal-content.custom-modal {
+  background: #192230E0 !important; /* fondo oscuro semi-transparente */
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6) !important;
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.modal-header.custom-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding: 24px 30px !important;
+}
+
+.modal-body.custom-body {
+  padding: 30px 35px !important;
+}
+
+.modal-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: #4fa3e3;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Imagen dentro del modal */
+.modal-img-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.modal-img-container:hover {
+  transform: scale(1.02);
+}
+
+/* Lista de características con iconos */
+.modal-feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-feature-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  color: #cfcfcf;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.modal-feature-list li::before {
+  content: "\f058"; /* check circle icon in fontawesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: #4fa3e3;
+  font-size: 0.95rem;
+}
+
+/* Badges de tecnologías en el modal */
+.modal-tech-badge {
+  background: rgba(30, 124, 201, 0.15) !important;
+  border: 1px solid rgba(30, 124, 201, 0.3) !important;
+  color: #90cdf4 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  text-transform: capitalize;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
